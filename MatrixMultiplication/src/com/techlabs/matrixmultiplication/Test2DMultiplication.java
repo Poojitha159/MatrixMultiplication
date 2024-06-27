@@ -7,11 +7,30 @@ public class Test2DMultiplication {
 	public static void main(String[] args) {
 	
 Scanner scanner = new Scanner(System.in);
+int row1=0, column1=0,row2=0,column2=0;
 	    
-	    System.out.println("Enter the number of rows of 1st matrix :");
-	    int row1= scanner.nextInt();
-	    System.out.println("Enter the number of columns of 1st matrix :");
-	    int column1= scanner.nextInt();
+
+while(true){
+    System.out.println("Enter the number of rows of 1st matrix :");
+     row1= scanner.nextInt();
+     if(row1<=0){
+         System.out.println("Number of rows must be a positive integer. Please try again.");
+            continue;
+        }
+        break;
+    
+
+     }	    
+while(true){
+    System.out.println("Enter the number of columns of 1st matrix :");
+     column1= scanner.nextInt();
+    
+    if (column1 <= 0) {
+            System.out.println("Number of columns must be a positive integer. Please try again.");
+            continue;
+        }
+        break;
+    }
 	    
 	    int array1[][]=new int[row1][column1];
 	    
@@ -24,11 +43,30 @@ Scanner scanner = new Scanner(System.in);
 	    }
 	    
 	    
-	    System.out.println("Enter the number of rows of 2nd matrix :");
-	    int row2= scanner.nextInt();
-	    System.out.println("Enter the number of columns of 2nd matrix :");
-	    int column2= scanner.nextInt();
-	    
+	    while(true){
+	        
+		    
+		    System.out.println("Enter the number of rows of 2nd matrix :");
+		     row2= scanner.nextInt();
+		      if (row2 <= 0) {
+	                System.out.println("Number of rows must be a positive integer. Please try again.");
+	                continue;
+	            }
+	            break;
+	        }
+	        
+	    while(true){
+            
+	        
+		    System.out.println("Enter the number of columns of 2nd matrix :");
+		     column2= scanner.nextInt();
+		     
+		      if (column2 <= 0) {
+	                System.out.println("Number of columns must be a positive integer. Please try again.");
+	                continue;
+	            }
+	            break;
+	        }	    
 	    int array2[][]=new int[row2][column2];
 	    System.out.println("Enter the values 2nd Matrix row wise :");
 	    for(int i=0;i<row2;i++) {
